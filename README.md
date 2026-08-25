@@ -1,1 +1,45 @@
-# soc-log-analyzer
+# 🛡️ SOC Log Analyzer
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite)
+![Security](https://img.shields.io/badge/Focus-Cybersecurity-red)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-Mapped-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+An automated **Security Operations Center (SOC) Log Analysis and Threat Detection Platform** designed to analyze security logs, identify suspicious activities, detect common attack patterns, calculate risk levels, and generate actionable security alerts.
+
+The system processes authentication, web server, and firewall logs through a rule-based detection engine, correlates security events, assigns severity levels, maps detected techniques to the **MITRE ATT&CK framework**, and presents security insights through a SOC-style dashboard and REST API.
+
+Built with **Python**, a modular **security detection engine**, **FastAPI REST backend**, **SQLite event storage**, **MITRE ATT&CK mapping**, and a modern **SOC cybersecurity dashboard** for security monitoring and incident triage.
+
+---
+
+## 🚀 Key Features
+
+- ⚡ **Security Log Analysis:** Parses authentication, web server, and firewall logs to extract meaningful security events.
+
+- 🔍 **Multi-Format Log Parsing:** Supports different log structures and converts raw log entries into a normalized event format.
+
+- 🔴 **Brute-Force Detection:** Identifies repeated failed authentication attempts from suspicious source IP addresses.
+
+- 🌐 **Port Scan Detection:** Detects abnormal connection attempts across multiple ports from a single source.
+
+- 💉 **SQL Injection Detection:** Identifies common SQL injection patterns in web requests and parameters.
+
+- 🧬 **XSS Detection:** Detects suspicious cross-site scripting payloads in HTTP requests.
+
+- 📂 **Path Traversal Detection:** Identifies directory traversal attempts such as `../` and suspicious file access patterns.
+
+- 🚨 **Threat Alert Generation:** Generates structured alerts containing attack type, source IP, severity, timestamp, and evidence.
+
+- 📊 **Risk Scoring:** Calculates a risk score based on attack patterns, frequency, severity, and correlated events.
+
+- 🎯 **MITRE ATT&CK Mapping:** Maps detected attack techniques to relevant MITRE ATT&CK technique IDs.
+
+- 🔗 **Event Correlation:** Correlates multiple related log events to identify larger attack patterns.
+
+- 📈 **SOC Dashboard:** Provides a centralized view of events, threats, severity levels, suspicious IPs, and security alerts.
+
+- 💻 **REST API:** Provides programmatic access to log analysis, detection results, alerts, and system statistics.
+
+- 📄 **Security Reports:** Generates structured JSON and CSV reports for further investigation and analysis.
