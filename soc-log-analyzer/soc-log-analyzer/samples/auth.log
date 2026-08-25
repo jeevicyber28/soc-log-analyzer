@@ -1,0 +1,12 @@
+Aug 25 09:00:01 lab-host sshd[1001]: Failed password for alice from 198.51.100.24 port 51231 ssh2
+Aug 25 09:01:04 lab-host sshd[1002]: Failed password for alice from 198.51.100.24 port 51232 ssh2
+Aug 25 09:02:07 lab-host sshd[1003]: Failed password for alice from 198.51.100.24 port 51233 ssh2
+Aug 25 09:03:10 lab-host sshd[1004]: Failed password for alice from 198.51.100.24 port 51234 ssh2
+Aug 25 09:04:13 lab-host sshd[1005]: Failed password for alice from 198.51.100.24 port 51235 ssh2
+Aug 25 09:05:16 lab-host sshd[1006]: Failed password for alice from 198.51.100.24 port 51236 ssh2
+Aug 25 09:06:20 lab-host sshd[1007]: Accepted password for alice from 198.51.100.24 port 51237 ssh2
+Aug 25 09:10:00 lab-host sshd[1008]: Accepted publickey for deploy from 203.0.113.50 port 42000 ssh2
+Aug 25 09:20:01 lab-host sshd[1009]: Invalid user admin from 192.0.2.44 port 40001
+Aug 25 09:21:02 lab-host sshd[1010]: Invalid user test from 192.0.2.44 port 40002
+Aug 25 09:22:03 lab-host sshd[1011]: Invalid user oracle from 192.0.2.44 port 40003
+Aug 25 09:30:00 lab-host systemd[1]: Started unrelated service.
