@@ -46,6 +46,7 @@ Built with **Python**, a modular **security detection engine**, **FastAPI REST b
 
 
 ---
+---
 
 ## 🧠 System Architecture & Data Flow
 
@@ -83,7 +84,6 @@ flowchart TD
     I --> J1[💻 REST API]
     I --> J2[📈 SOC Dashboard]
     I --> J3[📄 Security Reports]
-
 
 ---
 
