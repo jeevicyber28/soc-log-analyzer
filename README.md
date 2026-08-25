@@ -43,3 +43,43 @@ Built with **Python**, a modular **security detection engine**, **FastAPI REST b
 - 💻 **REST API:** Provides programmatic access to log analysis, detection results, alerts, and system statistics.
 
 - 📄 **Security Reports:** Generates structured JSON and CSV reports for further investigation and analysis.
+
+
+---
+
+## 🧠 System Architecture & Data Flow
+
+```mermaid
+flowchart TD
+
+    A[🔐 Security Log Sources] --> B[📥 Log Ingestion]
+
+    A1[Linux Authentication Logs] --> B
+    A2[Web Server Logs] --> B
+    A3[Firewall Logs] --> B
+
+    B --> C[🔍 Log Parser]
+
+    C --> D[🧹 Log Normalization]
+
+    D --> E[🧠 Detection Engine]
+
+    E --> F1[🔴 Brute Force Detection]
+    E --> F2[🌐 Port Scan Detection]
+    E --> F3[💉 SQL Injection Detection]
+    E --> F4[🧬 XSS Detection]
+    E --> F5[📂 Path Traversal Detection]
+
+    F1 --> G[📊 Risk Scoring Engine]
+    F2 --> G
+    F3 --> G
+    F4 --> G
+    F5 --> G
+
+    G --> H[🎯 MITRE ATT&CK Mapping]
+
+    H --> I[🚨 Alert Generator]
+
+    I --> J1[💻 REST API]
+    I --> J2[📈 SOC Dashboard]
+    I --> J3[📄 Security Reports]
