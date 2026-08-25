@@ -78,6 +78,7 @@ flowchart TD
     I --> J1[REST API]
     I --> J2[SOC Dashboard]
     I --> J3[Security Reports]
+---
 
 ## ⚙️ How It Works
 
