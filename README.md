@@ -44,17 +44,12 @@ Built with **Python**, a modular **security detection engine**, **FastAPI REST b
 
 - 📄 **Security Reports:** Generates structured JSON and CSV reports for further investigation and analysis.
 
-
----
----
-
 ---
 
 ## 🧠 System Architecture & Data Flow
 
 ```mermaid
 flowchart TD
-
     A[Security Log Sources] --> B[Log Ingestion]
 
     A1[Linux Authentication Logs] --> B
