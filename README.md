@@ -83,3 +83,90 @@ flowchart TD
     I --> J1[💻 REST API]
     I --> J2[📈 SOC Dashboard]
     I --> J3[📄 Security Reports]
+
+
+---
+
+## ⚙️ How It Works
+
+The SOC Log Analyzer follows a multi-stage security analysis pipeline:
+
+### 1. 📥 Log Ingestion
+
+The system accepts security events from different sources such as Linux authentication logs, web server logs, and firewall logs.
+
+### 2. 🔍 Log Parsing
+
+Raw log entries are parsed to extract important security information including:
+
+- Timestamp
+- Source IP address
+- Destination IP address
+- Username
+- Port
+- HTTP method
+- Requested URL
+- Status code
+- Event type
+
+### 3. 🧹 Log Normalization
+
+Different log formats are converted into a common event structure so that the detection engine can analyze them consistently.
+
+### 4. 🧠 Threat Detection
+
+The detection engine examines normalized events and searches for suspicious patterns such as repeated authentication failures, abnormal port activity, and malicious web requests.
+
+### 5. 📊 Risk Scoring
+
+Each detected event is assigned a risk score based on factors such as attack type, frequency, severity, and related events.
+
+### 6. 🎯 MITRE ATT&CK Mapping
+
+Detected attack behaviors are mapped to relevant **MITRE ATT&CK techniques** to provide additional context for security analysts.
+
+### 7. 🚨 Alert Generation
+
+When suspicious activity is detected, the system generates a structured security alert containing the source, detection type, severity, risk score, evidence, and MITRE ATT&CK mapping.
+
+### 8. 📈 Security Dashboard
+
+The processed results are presented through a SOC-style dashboard where analysts can monitor security events, investigate alerts, and review threat activity.
+
+### 9. 🔌 REST API
+
+The FastAPI backend exposes analysis and alert data through REST endpoints, allowing other applications to interact with the detection system.
+
+---
+
+## 🔐 Detection Capabilities
+
+The detection engine analyzes security events and identifies common attack patterns and suspicious behaviors.
+
+| Detection | Description | Severity |
+|---|---|---|
+| 🔴 SSH Brute Force | Detects repeated failed authentication attempts from the same source IP. | HIGH |
+| 🌐 Port Scanning | Identifies a source IP attempting connections across multiple ports. | HIGH |
+| 💉 SQL Injection | Detects common SQL injection patterns in HTTP requests and parameters. | CRITICAL |
+| 🧬 Cross-Site Scripting (XSS) | Identifies suspicious JavaScript and script injection payloads. | HIGH |
+| 📂 Path Traversal | Detects attempts to access files outside the intended web directory. | HIGH |
+| 🔎 Suspicious URL Access | Identifies requests targeting sensitive or commonly attacked endpoints. | MEDIUM |
+| 🔐 Suspicious Authentication | Detects unusual authentication activity and repeated login failures. | MEDIUM |
+| 🚨 Event Correlation | Correlates multiple related events to identify larger attack patterns. | HIGH |
+
+### 🔴 SSH Brute Force
+
+The system tracks failed authentication attempts by source IP and identifies repeated failures within a defined time window.
+
+Example:
+
+```text
+192.168.1.50 → Failed Login
+192.168.1.50 → Failed Login
+192.168.1.50 → Failed Login
+192.168.1.50 → Failed Login
+192.168.1.50 → Failed Login
+
+Detection: SSH Brute Force
+Severity: HIGH
+
