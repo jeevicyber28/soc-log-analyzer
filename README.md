@@ -47,6 +47,7 @@ The platform is designed to provide security analysts with a centralized view of
 
 ---
 
+
 ## 🧠 System Architecture & Data Flow
 
 ```mermaid
@@ -88,7 +89,7 @@ flowchart TD
 ---
 
 ## ⚙️ How It Works
-
+........
 The SOC Log Analyzer follows a multi-stage security analysis pipeline.
 
 ### 1. 📥 Log Ingestion
@@ -151,7 +152,7 @@ Detected attack behaviors are mapped to relevant **MITRE ATT&CK techniques**.
 This provides additional context to help security analysts understand the observed behavior.
 
 ### 7. 🚨 Alert Generation
-
+..
 When suspicious activity is detected, the system generates a structured alert containing:
 
 - Alert ID
